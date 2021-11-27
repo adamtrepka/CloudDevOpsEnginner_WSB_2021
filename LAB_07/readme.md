@@ -30,5 +30,5 @@
 
 ### Pobranie listy "Pod'ów"
 ` kubectl get pods`
-### Pobranie danych loudbalancer'a
+### Pobranie danych loadbalancer'a
  `kubectl get service mhc-front --watch`
