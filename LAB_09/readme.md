@@ -14,3 +14,5 @@
 
 ### Polecenie PS do wyświetlenia wartości przechowywanej w Key Vault
 `Write-Host $(first-secret-in-my-kv)`
+
+![Result](screen.png)
