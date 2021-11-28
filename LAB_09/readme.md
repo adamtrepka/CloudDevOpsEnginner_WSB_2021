@@ -19,29 +19,21 @@
 
 ### Przygotowanie pipeline w formie yaml
 
-```
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
+```yaml
 trigger:
 - master
 
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- group: "pw26799-kv-2"
+
 steps:
-- task: AzureKeyVault@2
-  inputs:
-    azureSubscription: 'WSB 2021 (2a518bab-365f-4594-b89a-95f4930f0736)'
-    KeyVaultName: 'pw26799-kv-2'
-    SecretsFilter: '*'
-    RunAsPreJob: false
 
 - script: |
-    echo $(secret-in-my-kv)
+    echo "secret-in-my-kv :" $(secret-in-my-kv)
   displayName: 'Value of secret-in-my-kv'
   ```
 
-  ![Result](screen2.png)
+![Result](screen2.png)
